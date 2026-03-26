@@ -11,3 +11,6 @@
 ### Computational Linguistics
 - Can Graph Descriptive Order Affect Solving Graph Problems with LLMs? [[ACL 2025](https://aclanthology.org/2025.acl-long.321/)]
 - “Well, Keep Thinking”: Enhancing LLM Reasoning with Adaptive Injection Decoding [[ACL 2025](https://aclanthology.org/2025.findings-acl.520/)]
+
+### Databases & Information Systems
+- CORONA: A Coarse-to-Fine Framework for Graph-based Recommendation with Large Language Models [[SIGIR 2025](https://doi.org/10.1145/3726302.3729937)]
