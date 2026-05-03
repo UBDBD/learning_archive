@@ -1,10 +1,6 @@
 # Learning Archive
 ### Computer Programming
 - [동적계획법(Dynamic Programming) > 정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
----
-### Natural Language Processing with Transformers
-1. Hello Transformers
-
 
 ## Paper Review
 ### Artificial Intelligence
