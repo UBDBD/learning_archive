@@ -4,7 +4,6 @@
 
 ## Paper Review
 ### Artificial Intelligence
-- Attention Is All You Need [[NeurIPS 2017](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)]
 - Exploiting Human-AI Dependence for Learning to Defer [[ICML 2024](https://openreview.net/forum?id=aiz79FxjaI)]
 - Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph [[ICLR 2024](https://arxiv.org/abs/2307.07697)]
 
