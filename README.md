@@ -1,4 +1,8 @@
 # Learning Archive
+
+### AI Competition
+- 제 5회 ETRI 휴먼이해 인공지능 논문경진대회 ([🔗](https://dacon.io/competitions/official/236690/overview/description))
+
 ### Computer Programming
 - [동적계획법(Dynamic Programming) > 정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
 
