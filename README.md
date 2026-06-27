@@ -5,6 +5,7 @@
 
 ### Computer Programming
 - [동적계획법(Dynamic Programming) > 정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
+- [2022 KAKAO BLIND RECRUITMENT > 양과 늑대](https://school.programmers.co.kr/learn/courses/30/lessons/92343)
 
 ## Paper Review
 ### Artificial Intelligence
