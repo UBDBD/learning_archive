@@ -1,6 +1,5 @@
-# Private Score 사후 분석
+# 최종 리더보드 결과 분석
 
-정리 기준일: 2026-06-26  
 최종 public score: `0.5726881984`  
 최종 private score: `0.61533`  
 최종 private leaderboard rank: `324`
