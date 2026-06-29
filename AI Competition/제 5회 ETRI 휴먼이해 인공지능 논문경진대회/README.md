@@ -11,9 +11,9 @@ https://dacon.io/competitions/official/236690/overview/description
 | 항목 | 값 |
 | --- | ---: |
 | Public logloss | `0.5726881984` |
-| Public rank | `67` |
+| Public rank | `67/409` |
 | Private logloss | `0.61533` |
-| Private rank | `324` |
+| Private rank | `324/409` |
 
 최종 public score는 개선되었지만, private score에서는 성능이 크게 악화되었다. 따라서 이 결과는 “private 일반화가 잘 된 모델”이 아니라, **public leaderboard feedback으로 선택된 재현 가능한 최종 제출 아티팩트**로 해석해야 한다.
 
