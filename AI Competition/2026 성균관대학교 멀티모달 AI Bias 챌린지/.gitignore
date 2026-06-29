@@ -1,0 +1,54 @@
+# 로컬 실행 환경
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 운영체제/편집기 파일
+.DS_Store
+*.swp
+*.swo
+
+# 공식 데이터와 대용량 이미지
+data/
+models/
+
+# 추론 산출물과 제출 후보
+artifacts/
+final_runs/
+final_submission.csv
+submission.csv
+*submission*.csv
+*prediction*.csv
+*predictions*.csv
+*.jsonl
+
+# 실험 로그와 체크포인트
+logs/
+runs/
+outputs/
+wandb/
+checkpoints/
+*.log
+
+# 대용량 모델/압축/바이너리 산출물
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar
+*.tar.gz
+
+# 로컬 설정과 인증 정보
+.env
+.env.*
+*.pem
+*.key
+*credential*
+*secret*
+*token*
