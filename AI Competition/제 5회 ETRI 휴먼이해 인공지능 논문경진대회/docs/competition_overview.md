@@ -48,7 +48,7 @@ score = mean(logloss(Q1), logloss(Q2), logloss(Q3), logloss(S1), logloss(S2), lo
 | final private score | `0.61533` |
 | final private rank | `324` |
 
-Private 결과상 최종 제출물은 public subset에 과하게 맞춰진 것으로 판단한다. 자세한 원인은 `private_score_postmortem.md`에 정리했다.
+Private 결과상 최종 제출물은 public subset에 과하게 맞춰진 것으로 판단한다. 자세한 원인은 `RESULT_ANALYSIS.md`에 정리했다.
 
 ---
 
@@ -118,16 +118,16 @@ lifelog_date 18:00 -> sleep_date 12:00
 
 ---
 
-## 5. 코드 및 모델 설명서 제출 규칙 요약
+## 5. 재현성 검증 기준
 
-재현성 검증 대상이 되는 코드는 다음 조건을 만족해야 한다.
+현재 정리본의 재현성 검증 대상 코드는 다음 조건을 만족해야 한다.
 
 - `/data` 또는 인자 기반 데이터 경로 지원
 - `.py` 코드 UTF-8 인코딩
 - 모든 코드가 오류 없이 실행 가능
 - OS 및 라이브러리 버전 또는 `requirements.txt` 제공
 - Private leaderboard score를 복원할 수 있어야 함
-- 모델 설명서 자유 양식 제출
+- 결과 및 재현 범위 명시
 
 현재 패키지는 다음 방식으로 최종 제출물을 재생성하고 sample submission 구조를 검증한다.
 

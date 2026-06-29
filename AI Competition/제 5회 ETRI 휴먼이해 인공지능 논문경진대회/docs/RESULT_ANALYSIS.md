@@ -195,65 +195,7 @@ public leaderboard feedback으로 선택된 최종 제출 아티팩트.
 
 ---
 
-## 9. 다음 대회에서의 기준
-
-비슷한 작은 test/public-probe 대회에서는 다음 기준을 적용하는 것이 더 안전하다.
-
-### 9.1 제출 후보 선택
-
-public이 좋아졌다는 이유만으로 같은 축을 계속 미세 조정하지 않는다.
-
-권장:
-
-```text
-public 개선 + 내부 CV/GroupCV/blocked CV 방향 일치
-```
-
-비권장:
-
-```text
-public 0.0001 개선만 보고 같은 target weight 계속 증가
-```
-
-### 9.2 확률 calibration
-
-최종 제출 전에는 aggressive probability를 완화한 후보를 반드시 비교한다.
-
-예시:
-
-```text
-p_final = 0.95 * p + 0.05 * target_prior
-p_final = clip(p_final, 0.02, 0.98)
-p_final = clip(p_final, 0.03, 0.97)
-```
-
-public에서는 조금 손해를 보더라도 private에서 큰 logloss 폭발을 막을 수 있다.
-
-### 9.3 Public probe 예산 관리
-
-남은 제출 횟수를 public 점수 미세 조정에만 쓰지 않는다.
-
-권장 제출 슬롯:
-
-1. public-upside 후보
-2. conservative calibration 후보
-3. independent model/seed ensemble 후보
-
-이번 프로젝트에서는 1번 유형에 대부분의 제출이 집중되었다.
-
-### 9.4 후보 family 분산
-
-같은 base 위 target-wise 후처리만 반복하면 후보 간 error correlation이 높다. private 대응력을 높이려면 다음처럼 다른 family가 필요하다.
-
-- 순수 CV-selected model
-- subject/time prior를 약하게 둔 model
-- 확률 clipping이 강한 conservative model
-- public-tuned model
-- 이들 간 low-weight ensemble
-
----
-
-## 10. 최종 평가
+## 9. 최종 평가
 
 이번 솔루션의 장점:
 
