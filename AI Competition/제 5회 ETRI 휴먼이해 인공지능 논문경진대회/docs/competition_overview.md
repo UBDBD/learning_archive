@@ -1,4 +1,4 @@
-# Competition and Data Overview
+# 대회 및 데이터 개요
 
 정리 기준일: 2026-06-26  
 프로젝트: DACON / ETRI “라이프로그 데이터를 활용한 수면, 감정, 스트레스 인식 및 추론”

@@ -1,4 +1,4 @@
-# Private Score Postmortem
+# Private Score 사후 분석
 
 정리 기준일: 2026-06-26  
 최종 public score: `0.5726881984`  

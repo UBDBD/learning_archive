@@ -1,4 +1,4 @@
-# Model and Reproducibility Guide
+# 모델 및 재현성 가이드
 
 정리 기준일: 2026-06-26  
 최종 제출 파일: `submission.csv`  
@@ -12,7 +12,7 @@
 
 ## 1. 최종 결과 재현
 
-GitHub 공개본에는 대회 제공 데이터(`data/`)와 최종 제출 CSV 산출물(`submission.csv`, `submissions/`)을 포함하지 않는다. 따라서 아래 명령은 로컬에 원본 데이터와 최종 제출 artifact를 보관하고 있는 경우에만 완전 재현된다.
+프로젝트 루트에서 실행한다.
 
 ```bash
 python3 reproduce_final_submission.py --data-dir data --out submission.csv --report-out reports/final_reproduction_report.json
@@ -38,7 +38,7 @@ reference_byte_equal: True
 
 ## 2. 최종 submission artifact
 
-로컬 정리본의 `submissions/`는 최종 재현에 필요한 파일만 남겼다. GitHub 공개본에서는 이 CSV 파일들을 커밋하지 않는다.
+`submissions/`는 최종 재현에 필요한 파일만 남겼다.
 
 | 파일 | 역할 |
 | --- | --- |

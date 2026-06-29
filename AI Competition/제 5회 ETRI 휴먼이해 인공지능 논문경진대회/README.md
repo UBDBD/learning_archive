@@ -1,15 +1,13 @@
 # DACON / 제 5회 ETRI 휴먼이해 인공지능 논문경진대회
 https://dacon.io/competitions/official/236690/overview/description
 
-이 저장소는 DACON/ETRI “라이프로그 데이터를 활용한 수면, 감정, 스트레스 인식 및 추론” 대회용 최종 제출 패키지입니다. 스마트폰 및 웨어러블 lifelog sensor data를 사용해 수면, 감정, 스트레스 관련 7개 binary target의 확률을 예측합니다.
+이 저장소는 DACON/ETRI “라이프로그 데이터를 활용한 수면, 감정, 스트레스 인식 및 추론” 대회용 최종 제출 패키지다. 스마트폰 및 웨어러블 lifelog sensor data를 사용해 수면, 감정, 스트레스 관련 7개 binary target의 확률을 예측한다.
 
-현재 저장소는 대회 종료 후 다음 목적에 맞게 정리되어 있습니다.
+현재 저장소는 대회 종료 후 다음 목적에 맞게 정리되어 있다.
 
 - 최종 `submission.csv` 재현
 - 모델/피처 엔지니어링 구조 설명
 - 최종 public/private 결과 및 private score 사후분석
-
-> GitHub 공개본에서는 대회 제공 원본 데이터(`data/`), 최종 제출 CSV(`submission.csv`, `submissions/`), public probing 기록(`reports/`)을 포함하지 않습니다. 원본 데이터는 DACON 대회 페이지에서 별도로 받아야 하며, 제출/리포트 산출물은 로컬 실행 결과로만 관리합니다.
 
 ---
 
@@ -22,7 +20,7 @@ https://dacon.io/competitions/official/236690/overview/description
 | Private logloss | `0.61533` |
 | Private rank | `324` |
 
-최종 public score는 개선되었지만, private score에서는 성능이 크게 악화되었습니다. 따라서 이 최종 파일은 “private 일반화가 잘 된 모델”이라기보다, **public leaderboard feedback으로 선택된 재현 가능한 최종 제출 아티팩트**로 해석해야 합니다.
+최종 public score는 개선되었지만, private score에서는 성능이 크게 악화되었다. 따라서 이 최종 파일은 “private 일반화가 잘 된 모델”이라기보다, **public leaderboard feedback으로 선택된 재현 가능한 최종 제출 아티팩트**로 해석해야 한다.
 
 Private 결과 기준 핵심 해석:
 
@@ -32,13 +30,13 @@ private 100% score      = 0.61533
 implied hidden 56% score ≈ 0.64883
 ```
 
-즉, hidden 56%에서 public 대비 약 `+0.076` 나빠졌고, public subset에 과하게 맞춰진 public-overfit이 확인되었습니다.
+즉, hidden 56%에서 public 대비 약 `+0.076` 나빠졌고, public subset에 과하게 맞춰진 public-overfit이 확인되었다.
 
 ---
 
 ## 2. 대회 목표와 평가 방식
 
-대회 목표는 lifelog sensor data를 이용해 7개 binary target을 예측하는 것입니다.
+대회 목표는 lifelog sensor data를 이용해 7개 binary target을 예측하는 것이다.
 
 | Target | 의미 |
 | --- | --- |
@@ -50,9 +48,9 @@ implied hidden 56% score ≈ 0.64883
 | `S3` | 수면 지연시간 |
 | `S4` | 수면 중 각성 시간 |
 
-제출 파일은 test 250행에 대해 위 target 7개 열에 `0~1` 확률을 채운 CSV입니다. Hard label이 아니라 확률을 제출해야 합니다.
+제출 파일은 test 250행에 대해 위 target 7개 열에 `0~1` 확률을 채운 CSV다. Hard label이 아니라 확률을 제출해야 한다.
 
-평가 지표는 7개 target별 binary logloss의 평균입니다.
+평가 지표는 7개 target별 binary logloss의 평균이다.
 
 ```text
 score = mean(
@@ -72,7 +70,7 @@ Leaderboard 구조:
 
 ## 3. 데이터 구조
 
-현재 패키지의 데이터 구조는 다음과 같습니다.
+현재 패키지의 데이터 구조는 다음과 같다.
 
 ```text
 data/
@@ -109,7 +107,7 @@ sleep_date = lifelog_date 다음 날
 sensor merge 기준 = lifelog_date
 ```
 
-수면 관련 feature는 일반적인 0시~24시 하루 단위가 아니라 다음 구간을 하나의 sleep episode로 해석합니다.
+수면 관련 feature는 일반적인 0시~24시 하루 단위가 아니라 다음 구간을 하나의 sleep episode로 해석한다.
 
 ```text
 lifelog_date 18:00 -> sleep_date 12:00
@@ -138,7 +136,7 @@ lifelog_date 18:00 -> sleep_date 12:00
 
 ## 5. 빠른 재현
 
-최종 `submission.csv`는 `reproduce_final_submission.py`로 재현합니다.
+최종 `submission.csv`는 `reproduce_final_submission.py`로 재현한다.
 
 ```bash
 python3 reproduce_final_submission.py --data-dir data --out submission.csv --report-out reports/final_reproduction_report.json
@@ -158,13 +156,13 @@ columns: data/ch2026_submission_sample.csv와 동일
 row order: sample submission과 동일
 ```
 
-`reports/final_reproduction_report.json`에는 최종 재현에 사용한 base/source 경로, S3 mean-lock 수치, target 평균, 확률 범위, reference 비교 결과가 저장됩니다.
+`reports/final_reproduction_report.json`에는 최종 재현에 사용한 base/source 경로, S3 mean-lock 수치, target 평균, 확률 범위, reference 비교 결과가 저장된다.
 
 ---
 
 ## 6. 실행 환경
 
-필수 패키지는 `requirements.txt`에 정의되어 있습니다.
+필수 패키지는 `requirements.txt`에 정의되어 있다.
 
 ```text
 pandas>=2.0
@@ -181,7 +179,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-`reproduce_final_submission.py`와 `solution.py`는 기본 데이터 경로로 `data`를 사용합니다. 다른 환경에서는 다음처럼 경로를 지정할 수 있습니다.
+`reproduce_final_submission.py`와 `solution.py`는 기본 데이터 경로로 `data`를 사용한다. 다른 환경에서는 다음처럼 경로를 지정할 수 있다.
 
 ```bash
 python3 reproduce_final_submission.py --data-dir /data --out submission.csv
@@ -225,7 +223,7 @@ python3 solution.py --data-dir /data --out submission.csv
 
 ## 8. 최종 submission artifact
 
-`submissions/`는 최종 재현에 필요한 파일만 남겼습니다.
+`submissions/`는 최종 재현에 필요한 파일만 남겼다.
 
 ```text
 submissions/final/
@@ -241,7 +239,7 @@ submissions/final/
 | `submissions/final/base_public_best_before_final.csv` | 최종 S3 조정 전 public-best base |
 | `submissions/final/stage2_source.csv` | 최종 S3 방향 계산에 사용한 stage2 prediction source |
 
-최종 제출물은 base에서 `S3`만 stage2 방향으로 이동한 뒤, S3 평균을 base와 같게 mean-lock한 결과입니다.
+최종 제출물은 base에서 `S3`만 stage2 방향으로 이동한 뒤, S3 평균을 base와 같게 mean-lock한 결과다.
 
 ```text
 S3_raw = clip(base_S3 + 0.70 * (stage2_S3 - base_S3))
@@ -258,13 +256,13 @@ S3_final = sigmoid(logit(S3_raw) + intercept)
 | locked S3 mean | `0.6729949309496948` |
 | logit intercept shift | `0.01273903376585006` |
 
-최종 제출물은 base 대비 `S3`만 변경합니다.
+최종 제출물은 base 대비 `S3`만 변경한다.
 
 ---
 
 ## 9. 모델 파이프라인
 
-`solution.py`는 train/test를 합쳐 `subject_id`, `lifelog_date` 기준 feature table을 만든 뒤, 7개 target을 각각 binary classifier로 학습합니다.
+`solution.py`는 train/test를 합쳐 `subject_id`, `lifelog_date` 기준 feature table을 만든 뒤, 7개 target을 각각 binary classifier로 학습한다.
 
 전체 흐름:
 
@@ -280,7 +278,7 @@ train/sample CSV 로드
 -> submission variant 저장
 ```
 
-향후 `solution.py`를 다시 실행하면 보조 submission variant는 `submissions/generated/`에 생성됩니다. 최종 보관용 파일은 `submissions/final/`에 유지됩니다.
+향후 `solution.py`를 다시 실행하면 보조 submission variant는 `submissions/generated/`에 생성된다. 최종 보관용 파일은 `submissions/final/`에 유지된다.
 
 ---
 
@@ -301,7 +299,7 @@ train/sample CSV 로드
 | usage | app count, total time stats, top app usage |
 | sleep block | `lifelog_date 18:00 -> sleep_date 12:00` 구간의 sleep episode proxy |
 
-수면 episode는 5분 bin으로 나눈 뒤 screen-off, no-step, still activity, darkness, low heart rate, no app usage 등을 조합해 sleep block proxy를 만듭니다.
+수면 episode는 5분 bin으로 나눈 뒤 screen-off, no-step, still activity, darkness, low heart rate, no app usage 등을 조합해 sleep block proxy를 만든다.
 
 ---
 
@@ -334,7 +332,7 @@ Leakage 방지:
 
 ## 12. Private score 사후 분석 요약
 
-Private 결과는 최종 후보가 public subset에 과하게 맞춰졌음을 보여줍니다.
+Private 결과는 최종 후보가 public subset에 과하게 맞춰졌음을 보여준다.
 
 점수 분해:
 
@@ -370,15 +368,15 @@ public leaderboard feedback으로 선택된 최종 제출 아티팩트.
 | `docs/model_and_reproducibility.md` | 최종 제출물 재현 방법과 모델 구조 |
 | `docs/private_score_postmortem.md` | private score 악화 및 public-overfit 원인 분석 |
 
-README에 핵심 내용을 통합했지만, 세부 확인이 필요하면 위 문서를 참고하면 됩니다.
+README에 핵심 내용을 통합했지만, 세부 확인이 필요하면 위 문서를 참고하면 된다.
 
 ---
 
 ## 14. 주의사항
 
-- `sleep_date`는 `lifelog_date`의 다음 날입니다.
-- 센서 로그는 `sleep_date`가 아니라 `lifelog_date` 기준으로 merge합니다.
-- 제출 파일의 행/열 순서는 `data/ch2026_submission_sample.csv`와 동일해야 합니다.
-- target 값은 hard label이 아니라 확률입니다.
-- 최종 `submission.csv`는 재현 가능하지만, private 결과상 일반화 성능이 좋은 모델로 해석하면 안 됩니다.
-- `solution.py`는 전체 모델 구현 근거 코드이고, 최종 제출 CSV의 정확한 재현은 `reproduce_final_submission.py`가 담당합니다.
+- `sleep_date`는 `lifelog_date`의 다음 날이다.
+- 센서 로그는 `sleep_date`가 아니라 `lifelog_date` 기준으로 merge한다.
+- 제출 파일의 행/열 순서는 `data/ch2026_submission_sample.csv`와 동일해야 한다.
+- target 값은 hard label이 아니라 확률이다.
+- 최종 `submission.csv`는 재현 가능하지만, private 결과상 일반화 성능이 좋은 모델로 해석하면 안 된다.
+- `solution.py`는 전체 모델 구현 근거 코드이고, 최종 제출 CSV의 정확한 재현은 `reproduce_final_submission.py`가 담당한다.
