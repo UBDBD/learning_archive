@@ -129,7 +129,7 @@ lifelog_date 18:00 -> sleep_date 12:00
 - Private leaderboard score를 복원할 수 있어야 함
 - 모델 설명서 자유 양식 제출
 
-현재 패키지는 다음 방식으로 최종 제출물을 복원한다.
+현재 패키지는 다음 방식으로 최종 제출물을 재생성하고 sample submission 구조를 검증한다.
 
 ```bash
 python3 reproduce_final_submission.py --data-dir data --out submission.csv --report-out reports/final_reproduction_report.json

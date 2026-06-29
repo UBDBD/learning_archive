@@ -1,12 +1,12 @@
 # 모델 및 재현성 가이드
 
-정리 기준일: 2026-06-26  
+정리 기준일: 2026-06-29  
 최종 제출 파일: `submission.csv`  
-최종 보관 파일: `submissions/final/final_selected.csv`  
+최종 보관 파일: `submissions/final/final_submission.csv`  
 최종 public score: `0.5726881984`  
 최종 private score: `0.61533`  
 
-이 문서는 최종 제출 패키지에서 실제로 필요한 재현 방법과 모델 구조만 정리한다.
+이 문서는 현재 정리된 패키지에서 실제로 동작하는 재현 방식과 모델 구조를 설명한다.
 
 ---
 
@@ -18,10 +18,12 @@
 python3 reproduce_final_submission.py --data-dir data --out submission.csv --report-out reports/final_reproduction_report.json
 ```
 
+현재 기본 모드는 `submissions/final/final_submission.csv`를 읽어 sample submission 구조를 검증한 뒤 `submission.csv`로 복사한다.
+
 성공 조건:
 
 ```text
-reference_byte_equal: True
+artifact_byte_equal: True
 ```
 
 현재 검증된 제출 형식:
@@ -38,22 +40,22 @@ reference_byte_equal: True
 
 ## 2. 최종 submission artifact
 
-`submissions/`는 최종 재현에 필요한 파일만 남겼다.
+정리 후 `submissions/final/`에는 최종 제출 CSV 하나만 남긴다.
 
 | 파일 | 역할 |
 | --- | --- |
-| `submissions/final/final_selected.csv` | 최종 선택 제출 파일. root `submission.csv`와 동일 |
-| `submissions/final/base_public_best_before_final.csv` | 최종 S3 조정 전 base |
-| `submissions/final/stage2_source.csv` | 최종 S3 방향 계산에 사용한 stage2 source |
+| `submissions/final/final_submission.csv` | 최종 선택 제출 파일. `submission.csv` 재생성 기준 파일 |
 
-최종 제출물 생성 공식:
+기존 탐색 과정에서 사용한 base/stage2 후보 CSV는 중복 산출물로 보고 보관 대상에서 제외했다. 대신 최종 조정 방식과 수치는 `reports/final_reproduction_report.json`과 이 문서에 남긴다.
+
+과거 S3 조정 공식:
 
 ```text
 S3_raw = clip(base_S3 + 0.70 * (stage2_S3 - base_S3))
 S3_final = sigmoid(logit(S3_raw) + intercept)
 ```
 
-`intercept`는 `mean(S3_final) == mean(base_S3)`가 되도록 이진 탐색으로 찾는다.
+`intercept`는 `mean(S3_final) == mean(base_S3)`가 되도록 이진 탐색으로 찾았다.
 
 최종 수치:
 
@@ -65,7 +67,11 @@ S3_final = sigmoid(logit(S3_raw) + intercept)
 | locked S3 mean | `0.6729949309496948` |
 | logit intercept shift | `0.01273903376585006` |
 
-최종 제출물은 base 대비 `S3`만 변경한다.
+base/stage2 파일을 별도로 복원한 경우에는 다음처럼 과거 조정을 다시 실행할 수 있다.
+
+```bash
+python3 reproduce_final_submission.py --mode mean-lock --data-dir data --out submission.csv --report-out reports/final_reproduction_report.json
+```
 
 ---
 
@@ -165,7 +171,7 @@ Leakage 방지:
 
 ## 6. 최종 결과 해석상 주의
 
-최종 `submission.csv`는 재현 가능하지만, private 결과상 일반화가 좋았던 모델은 아니다.
+최종 `submission.csv`는 재생성 가능하지만, private 결과상 일반화가 좋았던 모델은 아니다.
 
 정확한 해석:
 
