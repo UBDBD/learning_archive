@@ -18,9 +18,9 @@ https://dacon.io/competitions/official/236722/overview/description
 | 항목 | 값 |
 | --- | ---: |
 | Public score | `0.99558` |
-| Public rank | `65` |
+| Public rank | `65/263` |
 | Private score | `0.72261` |
-| Private rank | `83` |
+| Private rank | `83/263` |
 
 최종 제출본은 public score에서는 매우 높았지만 private score에서 크게 하락했다. 따라서 이 제출물은 “private 일반화가 충분히 검증된 모델”이라기보다, **public leaderboard에서 강했던 재현 가능한 최종 제출 아티팩트**로 해석해야 한다.
 
