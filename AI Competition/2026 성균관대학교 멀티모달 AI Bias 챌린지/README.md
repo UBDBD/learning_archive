@@ -8,7 +8,6 @@ https://dacon.io/competitions/official/236722/overview/description
 - 최종 `final_submission.csv` 재현 및 검증
 - 모델/프롬프트/근거 게이트 파이프라인 설명
 - 최종 공개/비공개 리더보드 결과와 일반화 실패 원인 분석
-- GitHub 공개 전 제외해야 할 파일 정리
 
 > GitHub 공개본에서는 대회 제공 원본 데이터(`data/`), 모델 가중치(`models/`), 최종 제출 CSV(`final_submission.csv`), 원시 추론 로그(`*.jsonl`), 내부 산출물(`final_runs/`)을 포함하지 않는다. 원본 데이터와 모델 가중치는 대회 및 모델 배포처의 조건에 맞춰 별도로 준비해야 한다.
 
