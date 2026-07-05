@@ -12,6 +12,7 @@
 - Exploiting Human-AI Dependence for Learning to Defer [[ICML 2024](https://openreview.net/forum?id=aiz79FxjaI)]
 - Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph [[ICLR 2024](https://arxiv.org/abs/2307.07697)]
 - Probabilistic Learning to Defer: Handling Missing Expert Annotations and Controlling Workload Distribution [[ICLR 2025](https://proceedings.iclr.cc/paper_files/paper/2025/hash/78df0f831fbe5854349dbdfccde7ee5d-Abstract-Conference.html)]
+- Coverage-Constrained Human-AI Cooperation with Multiple Experts [[AAAI 2026](https://doi.org/10.1609/aaai.v40i21.38866)]
 
 ### Computational Linguistics
 - Can Graph Descriptive Order Affect Solving Graph Problems with LLMs? [[ACL 2025](https://aclanthology.org/2025.acl-long.321/)]
