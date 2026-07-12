@@ -3,7 +3,7 @@
 ### AI Competition
 - 제 5회 ETRI 휴먼이해 인공지능 논문경진대회 ([🔗](https://github.com/UBDBD/learning_archive/tree/main/AI%20Competition/제%205회%20ETRI%20휴먼이해%20인공지능%20논문경진대회))
 - 2026 성균관대학교 멀티모달 AI Bias 챌린지 ([🔗](https://github.com/UBDBD/learning_archive/tree/main/AI%20Competition/2026%20성균관대학교%20멀티모달%20AI%20Bias%20챌린지))
-- 2026 Samsung Collegiate Programming Challenge: AI 챌린지([🔗](https://github.com/UBDBD/learning_archive/tree/main/AI%20Competition/2026%20Samsung%20Collegiate%20Programming%20Challenge_AI%20챌린지))
+- 2026 Samsung Collegiate Programming Challenge: AI 챌린지([🔗]([https://github.com/UBDBD/learning_archive/tree/main/AI%20Competition/2026%20Samsung%20Collegiate%20Programming%20Challenge_AI%20챌린지](https://github.com/UBDBD/learning_archive/tree/main/AI%20Competition/2026%20Samsung%20Collegiate%20Programming%20Challenge_AI%20%E1%84%8E%E1%85%A2%E1%86%AF%E1%84%85%E1%85%B5%E1%86%AB%E1%84%8C%E1%85%B5)))
 ### Computer Programming
 - [동적계획법(Dynamic Programming) > 정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
 - [2022 KAKAO BLIND RECRUITMENT > 양과 늑대](https://school.programmers.co.kr/learn/courses/30/lessons/92343)
