@@ -1,4 +1,4 @@
-# 2026 Samsung Collegiate Programming Challenge AI 챌린지
+# 2026 Samsung Collegiate Programming Challenge: AI 챌린지
 https://dacon.io/competitions/official/236730/overview/description
 
 최종 결과는 **133등**이다. 이 저장소는 대회 제공 task stream을 스키마에 맞는 `submission.csv`로 변환하는 결정적 Python harness다. 모델 학습, 외부 API 호출, 핵심 실행 경로의 네트워크 접근은 사용하지 않는다.
