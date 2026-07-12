@@ -1,0 +1,3 @@
+# 핵심 제출 생성과 재현 검증은 Python 표준 라이브러리만 사용한다.
+# 아래 패키지는 analyze_control_model.py의 선택적 사후 분석에 필요하다.
+scikit-learn>=1.0,<2.0
