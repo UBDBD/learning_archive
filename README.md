@@ -14,6 +14,7 @@
 
 
 ### Computational Linguistics
+- LLM Safety From Within: Detecting Harmful Content with Internal Representations [[ACL 2026](https://aclanthology.org/2026.acl-long.1844/)]([🔗](https://github.com/UBDBD/learning_archive/blob/main/Paper%20Review/Computational%20Linguistics/LLM%20Safety%20From%20Within_%20Detecting%20Harmful%20Content%20with%20Internal%20Representations.pdf))
 - “Well, Keep Thinking”: Enhancing LLM Reasoning with Adaptive Injection Decoding [[ACL 2025](https://aclanthology.org/2025.findings-acl.520/)]([🔗](https://github.com/UBDBD/learning_archive/blob/main/Paper%20Review/Computational%20Linguistics/“Well%2C%20Keep%20Thinking”_Adaptive%20Injection%20Decoding.pdf))
 - Can Graph Descriptive Order Affect Solving Graph Problems with LLMs? [[ACL 2025](https://aclanthology.org/2025.acl-long.321/)]([🔗](https://github.com/UBDBD/learning_archive/blob/main/Paper%20Review/Computational%20Linguistics/Can%20Graph%20Descriptive%20Order%20Affect%20Solving%20Graph%20Problems%20with%20LLMs%3F.pdf))
 
